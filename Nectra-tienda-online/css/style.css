@@ -128,7 +128,6 @@
             transform: scale(1.1);
         }
 
-        /* Badge contador de productos */
         .cart-badge {
             position: absolute;
             top: -4px;
@@ -282,7 +281,7 @@
             font-size: 14px;
         }
 
-        /* ---------------- HERO / PRINCIPAL ---------------- */
+
         .header-content {
             display: flex;
             align-items: center;
@@ -397,7 +396,7 @@
             font-size: 18px;
         }
 
-        /* ---------------- INFORMACIÓN Y SOSTENIBILIDAD ---------------- */
+
         .info {
             background-color: var(--bg-accent);
             padding: 80px 0;
@@ -676,3 +675,184 @@
                 width: 320px;
             }
         }
+
+      
+
+.header {
+
+    padding-top: 80px; 
+}
+
+.menu {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(254, 243, 199, 0.95); /* Fondo crema con suave transparencia */
+    backdrop-filter: blur(8px); /* Efecto cristalino moderno */
+    box-shadow: 0 4px 15px rgba(69, 26, 3, 0.08);
+    z-index: 2000; /* Asegura que siempre quede sobre cualquier otro elemento */
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+}
+
+
+.submenu:hover #carrito,
+#carrito.active {
+    position: fixed !important;
+    top: 70px !important;
+    right: 20px !important;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* ==================== BUSCADOR DE PRODUCTOS ==================== */
+.search-container {
+    max-width: 550px;
+    margin: 0 auto 0px auto;
+    text-align: center;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid var(--bg-accent, #fef3c7);
+    border-radius: 30px;
+    padding: 8px 20px;
+    box-shadow: 0 4px 12px rgba(180, 83, 9, 0.06);
+    transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+    border-color: var(--primary-amber, #d97706);
+    box-shadow: 0 6px 18px rgba(217, 119, 6, 0.15);
+}
+
+.search-icon {
+    color: var(--primary-amber, #d97706);
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+#input-buscador {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--text-dark, #451a03);
+    background: transparent;
+}
+
+.clear-search-btn {
+    background: none;
+    border: none;
+    color: #a1a1aa;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s ease;
+}
+
+.clear-search-btn:hover {
+    color: var(--primary-amber, #d97706);
+}
+
+.no-products-msg {
+    margin-top: 15px;
+    color: var(--text-muted, #78350f);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* Ocultar tarjeta al filtrar */
+.box.hidden-product {
+    display: none !important;
+}
+
+
+.submenu {
+display: flex;
+align-items: center;
+gap: 20px;
+position: relative;
+}
+
+.search-container {
+display: flex;
+align-items: center;
+background-color: var(--white);
+border: 1px solid #e0e0e0;
+border-radius: 20px;
+padding: 5px 12px;
+transition: var(--transition);
+}
+
+.search-container:focus-within {
+border-color: var(--primary-amber);
+box-shadow: 0 0 5px rgba(243, 156, 18, 0.3);
+}
+
+.search-container input {
+border: none;
+outline: none;
+background: transparent;
+padding: 4px 8px;
+font-size: 14px;
+width: 150px;
+}
+
+.search-container button {
+background: none;
+border: none;
+color: var(--text-muted);
+cursor: pointer;
+transition: var(--transition);
+}
+
+.search-container button:hover {
+color: var(--primary-amber);
+}
+
+
+@media (max-width: 991px) {
+    .menu.container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+
+    .menu-icono {
+        display: flex !important;
+        order: 2;
+    }
+
+
+    .submenu {
+        order: 3;
+        width: 100%;
+        display: flex; 
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .search-container {
+        flex: 1; 
+        max-width: none;
+    }
+
+    .navbar {
+        order: 4;
+        width: 100%;
+        display: none;
+    }
+
+    #menu:checked ~ .navbar {
+        display: block;
+    }
+}
