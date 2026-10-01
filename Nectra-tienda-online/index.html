@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nectra — Miel Artesanal y Natural</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+   
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
 
 </head>
@@ -17,10 +17,7 @@
     <header class="header">
         <div class="menu container">
             <a href="#" class="logo">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary-amber);">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-                Nectra
+                <img src="img/logo.jpg" alt="" style="width: 250px;">
             </a>
 
             <input type="checkbox" id="menu">
@@ -40,6 +37,14 @@
             </nav>
 
             <div class="submenu">
+
+                <div class="search-container">
+                    <input type="text" id="input-busqueda" placeholder="Buscar productos..." aria-label="Buscar productos">
+                        <button id="btn-buscar" type="button" aria-label="Buscar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                </div>
+
                 <div class="carrito-container" id="icono-carrito-trigger">
                     <svg id="img-carrito" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="9" cy="21" r="1"></circle>
@@ -125,7 +130,7 @@
         </div>
     </section>
 
-    <!-- INFORMACIÓN / SOSTENIBILIDAD -->
+    <!-- INFORMACIÓN  -->
     <section class="info">
         <div class="info-content container">
             <div class="info-img">
@@ -198,8 +203,6 @@
                 <h3>Nectra</h3>
                 <ul>
                     <li><a href="#">Sobre nosotros</a></li>
-                    <li><a href="#">Sostenibilidad</a></li>
-                    <li><a href="#">Blog apícola</a></li>
                 </ul>
             </div>
 
@@ -215,9 +218,26 @@
             <div class="link">
                 <h3>Contacto</h3>
                 <ul>
-                    <li><a href="mailto:info@nectra.com">info@nectra.com</a></li>
-                    <li><a href="#">+503 2200-0000</a></li>
-                    <li><a href="#">Atención al Cliente</a></li>
+                    <li>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nectra.miel@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-regular fa-envelope"></i> nectra.miel@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/50375248622" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-whatsapp"></i> +503 7524-8622
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/tu-pagina" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-facebook"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/tu-usuario" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -233,7 +253,16 @@
     <div id="toast">
         <span id="toast-message">Producto agregado al carrito</span>
     </div>
-    <script src="js/carrito.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script >
+        (function(){
+            emailjs.init("X5lnsCUWRQiJj1kJi");
+            })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+
 </body>
         
 </html>
