@@ -856,3 +856,9 @@ color: var(--primary-amber);
         display: block;
     }
 }
+
+.centrado_img{
+    width: 25px ;
+    display: flex;
+    gap: 3px; /* espacio entre imagen y texto */
+}
